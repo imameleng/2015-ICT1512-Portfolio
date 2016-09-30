@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    	<!--
+    	========================
+		Bake it Yourself
+		Contact page
+      	Author: PG Odendaal
+      	Filename: Contact.html
+      	========================
+   		-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Contact us!</title>
+		<link href="main.css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Cutive' rel='stylesheet' type='text/css'>
+		<script src="modernizr.custom.65897.js"></script>
+    </head>
+    
+<body>
+	<header class="header">
+      <div class="content-wrapper" style="margin-top: 0">
+         <div class="logo">
+               <a href="index.html"><img src="images/BiY-logo-sml.png" alt="logo" width="154" height="100"/></a>
+         </div>
+         <div class="right">
+            <a href="checkout.html"><img src="images/shopping_cart_empty.png" width="109" height="100" alt="shopping cart" id="cart" /></a>
+         </div>
+         <nav class="top-menu clear">
+            <ul>
+               <li><a href="index.html" class="current">HOME</a></li>
+               <li><a href="products.html">PRODUCTS</a></li>
+               <li><a href="checkout.html">CHECKOUT</a></li>
+               <li><a href="about.html">ABOUT</a></li>
+               <li><a href="contact.html" style="margin-right: 0">CONTACT</a></li>
+            </ul>
+         </nav>
+      </div>   
+   </header>
+	
+	<div class="content-wrapper heading">
+		<h1 class="heading-text">Get in touch</h1>
+	</div>
+	
+	<div class="content-wrapper white">
+		<div id="contact-left">
+			<h3>Our Details:</h3><br />
+			<p>Tel no: 072 144 8506</p><br />
+			<p>Email: bakeityourself123@gmail.com</p>
+			<br />
+			<h3>We would love to hear from you!</h3>
+		</div>
+		
+		<div id="contact-right">
+			<form id="form-02" novalidate="novalidate" >
+				<fieldset id="contact" class="text">
+					<legend>Contact us</legend>
+					<p>
+					<label for="fname">First Name</label>
+	            	<input id="fname" name="FirstName" type="text" required="required" />
+	            	</p>
+	            	<p>
+	            	<label for="surname">Surname</label>
+	            	<input id="surname" name="Surname" type="text" required="required" />
+	            	</p>
+	            	<p>
+	            	<label for="email"> Email Address</label>
+	            	<input id="email" name="Email" type="email" required="required"/>
+	            	</p>
+	            	<p>
+	            	<label for="phoneno">Phone Number</label>
+	            	<input id="phoneno" name="PhoneNo" type="tel" />
+	            	</p>
+	            	<div class="error" id="contacterr"></div>
+	            	<p>
+	            	<label for="message">Message</label>
+            		<textarea id="message" name="Message" placeholder="Say your say!"></textarea>
+            		<input type="submit" id="submitBtn" name="contact" value="Submit" />
+            		</p>
+				</fieldset>
+			</form>
+		</div>
+		<div style="clear: both"></div>
+	</div>
+
+	
+	<footer>
+      <div class="content-wrapper">
+         <div class="footer-div left">
+            <p>&copy; Bake it Yourself 2015</p>
+            <br />
+            <p>Tel no: 072 144 8506</p>
+         </div>
+         <div class="footer-div left">
+            <p id="date"></p>
+            <br />
+            <p><a href="feedback.html">Tell us what you think!</a></p>
+            <br />
+            <a href="https://www.facebook.com/Bakeityoursel?fref=ts"><img src="images/facebook.png" alt="fb" width="50" height="50"/></a>
+            <a href="http://www.twitter.com"><img src="images/twitter.png" alt="tw" width="50" height="50"/></a>
+            <a href="www.pinterest.com"><img src="images/pinterest.png" alt="pt" width="50" height="50"/></a>
+         </div>
+         <div class="footer-div mr right">
+            <p>Site developed by Deon Odendaal</p>
+            <br />
+            <p>info@deonodendaal.co.za</p>
+         </div>
+      </div>   
+   </footer>
+   <script src="cart.js"></script>
+   <script src="date.js"></script>
+	<script src="contact.js"></script>
+</body>	
+</html>

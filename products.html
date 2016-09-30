@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    	<!--
+    	========================
+		Bake it Yourself
+		Products page
+   	Author: PG Odendaal
+   	Filename: products.html
+   	========================
+		-->
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <title>Products</title>
+	  <link href="main.css" rel="stylesheet" />
+	  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	  <link href='http://fonts.googleapis.com/css?family=Cutive' rel='stylesheet' type='text/css'>
+	  <script src="modernizr.custom.65897.js"></script>
+   </head>
+    
+<body>
+	<header class="header">
+      <div class="content-wrapper" style="margin-top: 0">
+         <div class="logo">
+               <a href="index.html"><img src="images/BiY-logo-sml.png" alt="logo" width="154" height="100"/></a>
+         </div>
+         <div class="right">
+            <a href="checkout.html"><img src="images/shopping_cart_empty.png" width="109" height="100" alt="shopping cart" id="cart" /></a>
+         </div>
+         <nav class="top-menu clear">
+            <ul>
+               <li><a href="index.html" class="current">HOME</a></li>
+               <li><a href="products.html">PRODUCTS</a></li>
+               <li><a href="checkout.html">CHECKOUT</a></li>
+               <li><a href="about.html">ABOUT</a></li>
+               <li><a href="contact.html" style="margin-right: 0">CONTACT</a></li>
+            </ul>
+         </nav>
+      </div>   
+   </header>
+	
+	<div class="content-wrapper heading">
+		<h1 class="heading-text">Products</h1>
+	</div>
+	
+	<div class="content-wrapper white">
+	   <form id="form" action="checkout.html" novalidate="novalidate">
+	      
+	      <section>
+	         <h2>You can place an order for any of the products from this page.</h2> 
+	         <div class="descr-section left">
+	            <ul>	         
+	              <li>Click <span class="bold">"Add"</span> to increase the amount and <span class="bold">"Remove"</span> to decrease the amount.</li>
+	              <li>Click the <span class="bold">"Place Your Order"</span> button at the bottom of the page to complete checkout procedure.</li>
+	           </ul>
+	         </div> 
+	         <div class="descr-section right"> 
+	            <ul>
+	              <li>To view the method for making each product yourself, click on the product link.</li>
+	              <li>Click on any of the images to view large.</li>
+	           </ul>
+	         </div>
+	         <div class="clear"></div>
+	      </section>
+	      
+		<section class="prod-section">
+			<div class="left">
+				<img class="thumb" src="images/prod-01.jpg" alt="brownies" width="120" height="120" title="click for larger view" />
+			</div>
+			<div class="prod-desc left">
+			   <h3><a href="brownies.html">Brownies</a></h3>
+			   <p>Deliciuos chocolate brownies made with rich cocoa and fresh pecan nuts.</p>
+			   <p>Enjoy as a warm dessert with vanilla ice cream or share with unexpected guests.</p>
+			</div>
+			<div class="prod-order">
+			   <h4>R 85.00</h4>
+			   <p>Qty:&nbsp;<span class="itemQty" id="qty1">0</span></p>
+		      <input type="button" value="add" id="addBtn1" class="add" />
+		      <input type="button" value="remove" id="removeBtn1" class="remove" />
+			</div>
+		</section>
+		
+      <section class="prod-section">
+         <div class="left">
+            <img class="thumb" src="images/prod-02.jpg" alt="choc almond biscotti" width="120" height="120" title="click for larger view" />
+         </div>
+         <div class="prod-desc left">
+            <h3><a href="choc_almond_biscotti.html">Choc Almond Biscotti</a></h3>
+            <p>The jars contain everything you need, including milk and dark chocolate and fresh almonds.</p>
+            <p>You have not lived untill you tasted freshly baked biscotti.</p>
+         </div>
+         <div class="prod-order">
+            <h4>R 85.00</h4>
+            <p>Qty:&nbsp;<span class="itemQty" id="qty2">0</span></p>
+            <input type="button" value="add" id="addBtn2" class="add" />
+            <input type="button" value="remove" id="removeBtn2" class="remove" />
+         </div>
+      </section>
+      
+      <section class="prod-section">
+         <div class="left">
+            <img class="thumb" src="images/prod-03.jpg" alt="muesli bread" width="120" height="120" title="click for larger view" />
+         </div>
+         <div class="prod-desc left">
+            <h3><a href="brownies.html">Muesli Bread</a></h3>
+            <p>Freshly baked bread in only 5 easy steps, all you need is the jar and a 500ml buttermilk.
+            Its a healthy alternative to yeast bread as no dry or wet yeast is added. Wonderfully textured with muesli and sunflower seeds.</p>
+         </div>
+         <div class="prod-order">
+            <h4>R 90.00</h4>
+            <p>Qty:&nbsp;<span class="itemQty" id="qty3">0</span></p>
+            <input type="button" value="add" id="addBtn3" class="add" />
+            <input type="button" value="remove" id="removeBtn3" class="remove" />
+         </div>
+      </section>
+      
+      <section class="prod-section">
+         <div class="left">
+            <img class="thumb" src="images/prod-04.jpg" alt="seasoning salt" width="120" height="120" title="click for larger view" />
+         </div>
+         <div class="prod-desc left">
+            <h3><a href="seasoning_salt.html">Seasoning Salt</a></h3>
+            <p>Sea salt infused with various aromatic flavours such as lemon and orange ring, dried peppers and garlic.
+            Use on various cuts of meat: steak/chops/ chicken on the braai, lamb roast in the oven or even eggs for breakfast.</p>
+         </div>
+         <div class="prod-order">
+            <h4>R 45.00</h4>
+            <p>Qty:&nbsp;<span class="itemQty" id="qty4">0</span></p>
+            <input type="button" value="add" id="addBtn4" class="add"/>
+            <input type="button" value="remove" id="removeBtn4" class="remove"/>
+         </div>
+      </section>
+      
+      <section class="prod-section">
+         <div class="left">
+            <img class="thumb" src="images/prod-05.jpg" alt="choc marshmalow treats" width="120" height="120" title="click for larger view" />
+         </div>
+         <div class="prod-desc left">
+            <h3><a href="chocolate_marshmallow_treats.html">Chocolate Marshmallow Treats</a></h3>
+            <p>Treat the kids with a funfilled day in the kitchen by making fresh marshmallow treats.
+            There are currently two products in the range: Chocolate Marshmallow treats and Strawberry Marshmallow treats.</p>
+         </div>
+         <div class="prod-order">
+            <h4>R 65.00</h4>
+            <p>Qty:&nbsp;<span class="itemQty" id="qty5">0</span></p>
+            <input type="button" value="add" id="addBtn5" class="add" />
+            <input type="button" value="remove" id="removeBtn5" class="remove" />
+         </div>
+      </section>
+      
+      <section class="prod-section">
+         <div class="left">
+            <img class="thumb" src="images/prod-06.jpg" alt="strawberry marshmalow treats" width="120" height="120" title="click for larger view" />
+         </div>
+         <div class="prod-desc left">
+            <h3><a href="strawberry_marshmallow_treats.html">Strawberry Marshmallow Treats</a></h3>
+            <p>Treat the kids with a funfilled day in the kitchen by making fresh marshmallow treats.
+            There are currently two products in the range: Chocolate Marshmallow treats and Strawberry Marshmallow treats.</p>
+         </div>
+         <div class="prod-order">
+            <h4>R 65.00</h4>
+            <p>Qty:&nbsp;<span class="itemQty" id="qty6">0</span></p>
+            <input type="button" value="add" id="addBtn6" class="add" />
+            <input type="button" value="remove" id="removeBtn6" class="remove" />
+         </div>
+      </section>
+      
+      <div id="buttonwrapper">
+         <input type="submit" id="orderbutton" value="Submit" />
+         <div class="error" id="errmsg"></div>
+      </div>   
+      
+      
+   </form>
+	</div>
+	
+	<footer>
+      <div class="content-wrapper">
+         <div class="footer-div left">
+            <p>&copy; Bake it Yourself 2015</p>
+            <br />
+            <p>Tel no: 072 144 8506</p>
+         </div>
+         <div class="footer-div left">
+            <p id="date"></p>
+            <br />
+            <p><a href="feedback.html">Tell us what you think!</a></p>
+            <br />
+            <a href="https://www.facebook.com/Bakeityoursel?fref=ts"><img src="images/facebook.png" alt="fb" width="50" height="50"/></a>
+            <a href="http://www.twitter.com"><img src="images/twitter.png" alt="tw" width="50" height="50"/></a>
+            <a href="www.pinterest.com"><img src="images/pinterest.png" alt="pt" width="50" height="50"/></a>
+         </div>
+         <div class="footer-div mr right">
+            <p>Site developed by Deon Odendaal</p>
+            <br />
+            <p>info@deonodendaal.co.za</p>
+         </div>
+      </div>   
+   </footer>
+   <script src="cart.js"></script>
+	<script src="prod_order.js"></script>
+	<script src="date.js"></script>
+	<script src="prod_slider.js"></script>
+</body>	
+</html>

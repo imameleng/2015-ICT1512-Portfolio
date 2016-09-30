@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    	<!--
+    	========================
+		Bake it Yourself
+		Order result
+      	Author: PG Odendaal
+      	Filename: results.html
+      	========================
+   		-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Result</title>
+		<link href="main.css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Cutive' rel='stylesheet' type='text/css'>
+		<script src="modernizr.custom.65897.js"></script>
+    </head>
+    
+<body>
+	<header class="header">
+      <div class="content-wrapper" style="margin-top: 0">
+         <div class="logo">
+               <a href="index.html"><img src="images/BiY-logo-sml.png" alt="logo" width="154" height="100"/></a>
+         </div>
+         <div class="right">
+            <a href="checkout.html"><img src="images/shopping_cart_empty.png" width="109" height="100" alt="shopping cart" id="cart" /></a>
+         </div>
+         <nav class="top-menu clear">
+            <ul>
+               <li><a href="index.html" class="current">HOME</a></li>
+               <li><a href="products.html">PRODUCTS</a></li>
+               <li><a href="checkout.html">CHECKOUT</a></li>
+               <li><a href="about.html">ABOUT</a></li>
+               <li><a href="contact.html" style="margin-right: 0">CONTACT</a></li>
+            </ul>
+         </nav>
+      </div>   
+   </header>
+	
+	<div class="content-wrapper heading">
+		<h1 class="heading-text">Thanks for your Order!</h1>
+	</div>
+	
+	<div class="content-wrapper white">
+		 <h3>You entered the following data:</h3>
+   
+         <script>
+             var formData = location.search;
+             formData = formData.substring(1, formData.length);
+             while (formData.indexOf("+") !== -1) {
+                formData = formData.replace("+", " ");
+             }
+             formData = decodeURIComponent(formData);
+             var formArray = formData.split("&");
+             for (var i = 0; i < formArray.length; i = i + 1) {
+                document.write("<p>" + formArray[i] + "</p>");
+             }
+         </script>
+
+	</div>
+
+	
+	<footer>
+      <div class="content-wrapper">
+         <div class="footer-div left">
+            <p>&copy; Bake it Yourself 2015</p>
+            <br />
+            <p>Tel no: 072 144 8506</p>
+         </div>
+         <div class="footer-div left">
+            <p id="date"></p>
+            <br />
+            <p><a href="feedback.html">Tell us what you think!</a></p>
+            <br />
+            <a href="https://www.facebook.com/Bakeityoursel?fref=ts"><img src="images/facebook.png" alt="fb" width="50" height="50"/></a>
+            <a href="http://www.twitter.com"><img src="images/twitter.png" alt="tw" width="50" height="50"/></a>
+            <a href="www.pinterest.com"><img src="images/pinterest.png" alt="pt" width="50" height="50"/></a>
+         </div>
+         <div class="footer-div mr right">
+            <p>Site developed by Deon Odendaal</p>
+            <br />
+            <p>info@deonodendaal.co.za</p>
+         </div>
+      </div>   
+   </footer>
+   <script src="cart"></script>
+   <script src="date.js"></script>
+</body>	
+</html>

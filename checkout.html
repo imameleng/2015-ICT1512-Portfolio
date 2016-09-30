@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    	<!--
+    	========================
+			Bake it Yourself
+			Orders page
+			Author: PG Odendaal
+			Filename: checkout.html
+			========================
+   		-->
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<title>Checkout</title>
+			<link href="main.css" rel="stylesheet" />
+			<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+			<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+			<link href='http://fonts.googleapis.com/css?family=Cutive' rel='stylesheet' type='text/css'>
+		<script src="modernizr.custom.65897.js"></script>
+    </head>
+    
+<body>
+	<header class="header">
+      <div class="content-wrapper" style="margin-top: 0">
+         <div class="logo">
+               <a href="index.html"><img src="images/BiY-logo-sml.png" alt="logo" width="154" height="100"/></a>
+         </div>
+         <div class="right">
+            <a href="checkout.html"><img src="images/shopping_cart_empty.png" width="109" height="100" alt="shopping cart" id="cart" /></a>
+         </div>
+         <nav class="top-menu clear">
+            <ul>
+               <li><a href="index.html" class="current">HOME</a></li>
+               <li><a href="products.html">PRODUCTS</a></li>
+               <li><a href="checkout.html">CHECKOUT</a></li>
+               <li><a href="about.html">ABOUT</a></li>
+               <li><a href="contact.html" style="margin-right: 0">CONTACT</a></li>
+            </ul>
+         </nav>
+      </div>   
+   </header>
+	
+	<div class="content-wrapper heading">
+		<h1 class="heading-text">Checkout</h1>
+	</div>
+	
+	<div class="content-wrapper white">
+		
+		<div id="orderStatus">
+		   <h1>Oops!</h1>
+		   <h3>You do not currently have any pending orders.</h3>
+		   <h3>Visit the <a href='products.html'>Products</a> page to place an order.</h3>
+		   <img src="images/no_order.png" width="250" height="250" alt="no pending orders" />
+		</div>
+		
+		<!-- FORM -->
+		<form id="form-01" action="results.html" novalidate="novalidate">
+		   
+		  <!-- HIDDEN FORM FIELDS -->
+		  <input type="hidden" id="order-date" name="date" value="" />	  
+		  <input type="hidden" class="hidden" name="brownies" value="" />
+		  <input type="hidden" class="hidden" name="biscotti" value=""/>
+		  <input type="hidden" class="hidden" name="muesli-bread" value="" />
+		  <input type="hidden" class="hidden" name="seasoning" value=""/>
+		  <input type="hidden" class="hidden" name="choc-treats" value="" />
+		  <input type="hidden" class="hidden" name="strawberry-treats" value=""/>
+		  
+		  <!-- >> SECTION ONE << -->
+		  <div id="section-one">
+		     <section style="margin-bottom: 10px;">
+		        <h2>Check your order.</h2>
+		        <p>Before you place your order, <span class="bold">please verify that everything is correct</span>, and selecting the <span class="bold">delivery or collection</span> option.</p> 
+		        <p>You can go back and change it if you need to by clicking the <span class="bold">"Change Order"</span> button.</p>
+		        <p>If your order is correct please click the <span class="bold">"Confirm Order"</span> button to fill out your details and finalise your order.</p><br />
+		     </section>
+		   <!-- ORDER SUMMARY FIELD -->
+		   <fieldset id="summary">
+		      <legend>Your Order</legend>
+		      
+		      <div class="left">
+   		      <p>Is your order for delivery or collection?</p>
+   		      <p><input id="col" type="radio" name="delivery" value="collection" checked="checked"><span>Collection</span></p>
+   		      <p><input id="del" type="radio" name="delivery" value="delivery"><span>Delivery</span></p>
+   		      <br />
+   		      <hr>
+   		      <br />
+   		      <p><input type="button" id="change" value="Change Order" onclick="goBack()" /> <label for="change">if you wish to adjust it.</label></p>
+   		      <br />
+   		      <p><input type="button" id="confirm" value="Confirm Order" onclick="displayDetails()"/><label for="confirm"> to continue checkout.</label></p>		      
+            </div>
+            <div class="right">
+            
+            <!-- SUMMARY TABLE -->
+		      <table>
+		         <caption>Order Summary</caption>
+		         <colgroup>
+                  <col class="label" span="1" />
+                  <col class="price" span="1" />
+                  <col class="value" span="2" />
+               </colgroup>
+		         <thead>
+		            <tr>
+		               <th>Product</th>
+		               <th>Price ea</th>
+		               <th>Qty</th>
+		               <th>Cost</th>
+		            </tr>
+		         </thead>
+		         
+		         <tbody>
+		            <tr>
+		               <td>Brownies</td>
+		               <td>R 85</td>
+		               <td class="qty">0</td>
+		               <td class="cost">0</td>
+		            </tr>
+		            <tr>
+		               <td>Choc Almond Biscotti</td>
+		               <td>R 85</td>
+                     <td class="qty">0</td>
+                     <td class="cost">0</td>
+		            </tr>
+		            <tr>
+		               <td>Muesli Bread</td>
+		               <td>R 90</td>
+                     <td class="qty">0</td>
+                     <td class="cost">0</td>
+		            </tr>
+		            <tr>
+		               <td>Seasoning Salt</td>
+		               <td>R 45</td>
+                     <td class="qty">0</td>
+                     <td class="cost">0</td>
+		            </tr>
+		            <tr>
+		               <td>Chocolate Treats</td>
+		               <td>R 65</td>
+                     <td class="qty">0</td>
+                     <td class="cost">0</td>
+		            </tr>
+		            <tr>
+		               <td>Strawberry Treats</td>
+		               <td>R 65</td>
+                     <td class="qty">0</td>
+                     <td class="cost">0</td>
+		            </tr>
+		            <tr class="bold">
+		               <td colspan="2"></td>
+		               <td >SubTotal: </td>
+		               <td id="subtotal"></td>
+		            </tr>
+		            <tr class="bold">
+		               <td colspan="2"></td>
+                     <td>VAT: </td>
+                     <td id="tax">0</td>
+		            </tr>
+		            <tr class="bold">
+                     <td colspan="2"></td>
+                     <td>Del Fee: </td>
+                     <td id="delfee">0</td>
+                  </tr>
+		            <tr class="bold">
+		               <td colspan="2"></td>
+		               <td>TOTAL: </td>
+		               <td id="total">0</td>
+		            </tr>
+		         </tbody>
+		      </table>
+		      </div>
+		   </fieldset>
+		   <!--<div class="error" id="errmsg"></div>-->
+			</div>
+			
+			<!-- SECTION TWO -->
+         <div id="section-two">
+            <section style="width: 460px" class="left">
+               <h3>Almost done!</h3>
+               <p>Please enter your contact details, billing and delivery address to complete your order.</p>
+               <p>Once we receive your order we will send you the invoice. Your order will be dispatched once the invoice has been settled.</p>
+            </section>
+   			<!-- CONTACT DETAILS FIELD -->
+   			<fieldset id="contact" class="right">
+   				<legend>Contact Details</legend>
+   				<p>
+   				<label for="fname">First Name</label>
+               	<input id="fname" name="FirstName" type="text" required="required" />
+               	</p>
+               	<p>
+               	<label for="surname">Surname</label>
+               	<input id="surname" name="Surname" type="text" required="required" />
+               	</p>
+               	<p>
+               	<label for="email"> Email Address</label>
+               	<input id="email" name="Email" type="email" required="required"/>
+               	</p>
+               	<p>
+               	<label for="phoneno">Phone Number</label>
+               	<input id="phoneno" name="PhoneNo" type="tel" />
+               	</p>
+               	<div class="error" id="contacterr"></div>
+   			</fieldset>
+   			<div class="clear"></div>
+   			
+   			<!-- BILLING ADDRESS FIELD -->
+   			<fieldset id="billingaddr" class="left">
+   				<legend>Billing Address</legend>
+   				<p style="margin-top: 50px">
+   				<label for="addr-1">Address line 1</label>
+   				<input id="addr-1" name="Addr-1" type="text" required="required"/>
+   				</p>
+   				<p>
+   				<label for="addr-2">Address line 2</label>
+   				<input id="addr-2" name="Addr-2" type="text" />
+   				</p>
+   				<p>
+   				<label for="city">City or Suburb</label>
+   				<input id="city" name="City" type="text" required="required"/>
+   				</p>
+   				<p>
+   				<label for="pcode">Postal Code</label>
+   				<input id="pcode" name="PCode" type="text" required="required"/>
+   				</p>
+   				<div class="error" id="billerr"></div>
+   			</fieldset>
+   			<!-- DELIVERY ADDRESS FIELD -->
+   			<fieldset id="deliveryaddr" class="right">
+   				<legend>Delivery Address</legend>
+   				<p>
+   				<label for="sameAddr">Same as billing address</label>
+   				<input id="sameAddr" name="SameAddr" type="checkbox" />
+   				</p><br />
+   				<p>
+   				<label for="deladdr-1">Address line 1</label>
+   				<input id="deladdr-1" name="DelAddr-1" type="text" required="required"/>
+   				</p>
+   				<p>
+   				<label for="deladdr-2">Address line 2</label>
+   				<input id="deladdr-2" name="DelAddr-2" type="text" />
+   				</p>
+   				<p>
+   				<label for="delcity">City or Suburb</label>
+   				<input id="delcity" name="DelCity" type="text" required="required"/>
+   				</p>
+   				<p>
+   				<label for="delpcode">Postal Code</label>
+   				<input id="delpcode" name="DelPCode" type="text" required="required"/>
+   				</p>
+   				<div class="error" id="delerr"></div>
+   			</fieldset>
+   			<div class="clear"></div>
+   			<!-- SUBMIT BUTTON -->
+   				<div id="buttonwrapper">
+   					<input type="submit" value="Submit" id="orderbutton" />
+   				</div>						
+	        </div>
+			<div class="clear"></div>
+			
+		</form>
+	</div>	
+	<!-- FOOTER -->	
+	<footer>
+      <div class="content-wrapper">
+         <div class="footer-div left">
+            <p>&copy; Bake it Yourself 2015</p>
+            <br />
+            <p>Tel no: 072 144 8506</p>
+         </div>
+         <div class="footer-div left">
+            <p id="date"></p>
+            <br />
+            <p><a href="feedback.html">Tell us what you think!</a></p>
+            <br />
+            <a href="https://www.facebook.com/Bakeityoursel?fref=ts"><img src="images/facebook.png" alt="fb" width="50" height="50"/></a>
+            <a href="http://www.twitter.com"><img src="images/twitter.png" alt="tw" width="50" height="50"/></a>
+            <a href="www.pinterest.com"><img src="images/pinterest.png" alt="pt" width="50" height="50"/></a>
+         </div>
+         <div class="footer-div mr right">
+            <p>Site developed by Deon Odendaal</p>
+            <br />
+            <p>info@deonodendaal.co.za</p>
+         </div>
+      </div>   
+   </footer>
+   <script src="cart.js"></script>
+   <script src="date.js"></script>
+	<script src="checkout.js"></script>
+</body>	
+</html>
